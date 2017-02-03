@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elis Type</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+</head>
+
+<body>
+  <img id="logo" src="logo.jpg" /> <br />
+  <div class="container hat">
+    <div class="row">
+      <div class="navbar navbar-default center">
+        <div class="navbar-header">
+        </div>
+        <ul class="nav navbar-nav">
+          <li <%= active?(@active, :home) %>><%= link_to('HOME', root_path)%></li>
+          <li <%= active?(@active, :blog) %>><%= link_to('BLOG', blog_path) %></li>
+          <li <%= active?(@active, :shop) %>><%= link_to('SHOP', shop_path) %></li>
+          <li <%= active?(@active, :contacts) %>><%= link_to('CONTACTS', contacts_path) %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="container main"
+  <%= yield %>
+</div>
+
+</body>
+</html>
