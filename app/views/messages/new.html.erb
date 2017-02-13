@@ -1,0 +1,27 @@
+<h2>Enter a form!</h2>
+
+<%= form_for(@message, url: {controller: 'messages', action: 'create'}, html: {method: 'post'}) do |f| %>
+<table summary="Page from fields">
+  <tr>
+    <th>Name</th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th>Phone Number</th>
+    <td><%= f.phone_field(:phone_number) %> </td>
+  </tr>
+  <tr>
+    <th>E-mail</th>
+    <td><%= f.text_field(:email) %></td>
+  </tr>
+  <tr>
+    <th>Theme</th>
+    <td><%= f.text_field(:theme) %></td>
+  </tr>
+  <tr>
+    <th>Text</th>
+    <td><%= f.text_area(:text) %></td>
+  </tr>
+</table>
+<%= f.submit("Send a message") %>
+<%  end %>

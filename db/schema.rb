@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170202092344) do
+ActiveRecord::Schema.define(version: 20170211182941) do
 
   create_table "images", force: :cascade do |t|
     t.binary   "data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string   "name",         default: "Таинственный Аноним"
+    t.string   "phone_number"
+    t.string   "email"
+    t.string   "theme",        default: "Я вас очень люблю!"
+    t.text     "text"
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
   end
 
   create_table "posts", force: :cascade do |t|

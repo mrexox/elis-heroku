@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :messages, only: [:index, :create, :new, :destroy, :show]
   root 'main_page#home'
 
   get 'blog', to: 'main_page#blog'
   get 'shop', to: 'main_page#shop'
-  get 'contacts', to: 'main_page#contacts'
+  get 'contacts', to: 'messages#new'
 
   resources :posts do |p|
     # add delete here
