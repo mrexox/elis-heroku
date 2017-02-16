@@ -1,4 +1,7 @@
+# coding: utf-8
 class MessagesController < ApplicationController
+
+  before_action :check_logged_in, :only => [:show, :destroy, :index]
   def index
     # Only for admin
     @messages = Message.sorted

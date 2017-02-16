@@ -1,0 +1,10 @@
+<table>
+  <tr>
+    <th> Theme: </th>
+    <td> <%= f.text_field(:name) %> </td>
+  </tr>
+  <tr>
+    <th> Text: </th>
+    <td> <%= f.text_area(:text, size: '60x20') %></td>
+  </tr>
+</table>

@@ -1,3 +1,4 @@
 class Post < ApplicationRecord
-  has_many :images
+  mount_uploader :image, ImageUploader
+  scope :sorted, lambda { order('created_at DESC') }
 end

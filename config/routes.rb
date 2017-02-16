@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
 
-  resources :messages, only: [:index, :create, :new, :destroy, :show]
   root 'main_page#home'
+  
+  get 'admin', :to => 'access#console'
+  get 'access/console'
+  get 'access/login'
+  post 'access/attempt_login'
+  get 'access/logout'
+  
+  # resources :images, only: [:index, :create, :destroy, :show]
+
+  resources :messages, only: [:index, :create, :new, :destroy, :show]
+
 
   get 'blog', to: 'main_page#blog'
   get 'shop', to: 'main_page#shop'

@@ -3,23 +3,23 @@
 <%= form_for(@message, url: {controller: 'messages', action: 'create'}, html: {method: 'post'}) do |f| %>
 <table summary="Page from fields">
   <tr>
-    <th>Name</th>
+    <th>Ваше имя</th>
     <td><%= f.text_field(:name) %></td>
   </tr>
   <tr>
-    <th>Phone Number</th>
+    <th>Ваш телефон</th>
     <td><%= f.phone_field(:phone_number) %> </td>
   </tr>
   <tr>
-    <th>E-mail</th>
+    <th>Ваш e-mail</th>
     <td><%= f.text_field(:email) %></td>
   </tr>
   <tr>
-    <th>Theme</th>
+    <th>Тема сообщения</th>
     <td><%= f.text_field(:theme) %></td>
   </tr>
   <tr>
-    <th>Text</th>
+    <th>Текст сообщения</th>
     <td><%= f.text_area(:text) %></td>
   </tr>
 </table>

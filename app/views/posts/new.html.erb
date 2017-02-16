@@ -1,2 +1,11 @@
-<h1>Post#new</h1>
-<p>Find me in app/views/post/new.html.erb</p>
+
+<div class="post new">
+  <h1>Create New Post</h1>
+  <%= form_for( @post ) do |f| %>
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+    <div class="button-submit">
+      <%= f.submit("Create Post") %>
+    </div>
+
+    <% end %>
+  </div>
