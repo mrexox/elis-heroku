@@ -29,7 +29,7 @@ class MessagesController < ApplicationController
   def destroy
     @message = Message.find(params[:id])
     @message.destroy
-    flash[:notice] = "Сообщение '#{@message.theme}' удалено"
+    flash[:notice] = "Сообщение '#{@message.theme}' успешно удалено."
     redirect_to(messages_path)
   end
 

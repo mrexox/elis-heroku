@@ -1,14 +1,41 @@
 <% @active = :blog %>
-
+<div class="container-fluid">
 <div class="row">
+
   <div class="col col-xl-10 col-lg-9 col-md-9">
-    <p>Lalala</p>
+  <!--  <h1>My info</h1>
+    <div>
+      <%= image_tag(@post.image_url.to_s, :class => 'image') %>
+    </div>
+    <% if session[:user_id] %>
+    <%= link_to('Изменить', edit_post_path(@post.id))%>
+    <%= link_to('Удалить', delete_post_path(@post.id))%>
+    <br />
+    <p><%=@post.text%></p>
+    <% end %>
+  -->
   </div>
   <div class="col col-xl-2 col-lg-3 col-md-3">
-    <h1>Elis Type</h1>
-    <p> This is paragraph lorem ipsum lalala sdhfjs
-      sdfsdhjfhsjkfsdfshvjhcxh dsfhkv sdfhjksd vdvhskdfsd
-      dfhfjks sdfhhgd fjdhfjh dfjhj jdhfjsdhfjshfjdsf djfhjsdfh
-      dsfsfsdhfj dsjf</p>
+    <div class="right-side">
+      <div class="face">
+        <%=image_tag('face.jpg')%>
+      </div>
+      <div class="divider"></div>
+      <center><p align="middle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget pretium nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam neque libero, blandit sed diam laoreet, imperdiet pulvinar diam. Quisque dui purus, imperdiet at maximus vitae, malesuada eget justo. Duis id diam urna. Sed nec arcu id felis dapibus varius non ac odio. Pellentesque nisl urna, elementum vitae nulla at, maximus mattis nisl.
+      </p></center>
+      <div class="icons">
+        <%=image_tag('youtube-logo.png')%>
+        <%=image_tag('pinterest-logo.png')%>
+        <%=image_tag('instagram-logo.png')%>
+        <%=image_tag('vk-logo.png')%>
+        <%=image_tag('behance-logo.png')%>
+      </div>
+      <div class="image-links">
+        <%=image_tag('instagram-link.png')%>
+        <%=image_tag('youtube-link.png')%>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget pretium nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam neque libero, blandit sed diam laoreet, imperdiet pulvinar diam. Quisque dui purus, imperdiet at maximus vitae, malesuada eget justo. Duis id diam urna. Sed nec arcu id felis dapibus varius non ac odio. Pellentesque nisl urna, elementum vitae nulla at, maximus mattis nisl.</p>
+    </div>
+  </div>
   </div>
 </div>

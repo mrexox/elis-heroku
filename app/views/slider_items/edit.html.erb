@@ -1,0 +1,10 @@
+<div class="slider_item edit">
+    <h1>Edit Slider Item <%= @post.id %></h1>
+    <%= form_for( @post ) do |f| %>
+	<%= render(:partial => 'form', :locals => {:f => f}) %>
+	<div class="button-submit">
+	    <%= f.submit("Обновить слайд") %>
+	</div>
+
+    <% end %>
+</div>

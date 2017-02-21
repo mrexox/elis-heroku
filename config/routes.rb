@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  
   root 'main_page#home'
   
   get 'admin', :to => 'access#console'
@@ -17,8 +17,17 @@ Rails.application.routes.draw do
   get 'shop', to: 'main_page#shop'
   get 'contacts', to: 'messages#new'
 
-  resources :posts do |p|
+  resources :posts do
     # add delete here
+    member do
+      get :delete
+    end
+  end
+
+  resources :slider_items do |s|
+    member do
+      get :delete
+    end
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

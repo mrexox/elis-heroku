@@ -1,0 +1,11 @@
+
+<div class="slider_item new">
+    <h1>Create Slider Item</h1>
+    <%= form_for( @slider_item ) do |f| %>
+	<%= render(:partial => 'form', :locals => {:f => f}) %>
+	<div class="button-submit">
+	    <%= f.submit("Добавить слайд") %>
+	</div>
+
+    <% end %>
+</div>

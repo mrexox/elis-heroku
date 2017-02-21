@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170216134350) do
+ActiveRecord::Schema.define(version: 20170219054900) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "username"
@@ -26,21 +26,30 @@ ActiveRecord::Schema.define(version: 20170216134350) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string   "name",         default: "Таинственный Аноним"
     t.string   "phone_number"
     t.string   "email"
-    t.string   "theme",        default: "Я вас очень люблю!"
     t.text     "text"
-    t.datetime "created_at",                                   null: false
-    t.datetime "updated_at",                                   null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "name"
+    t.string   "theme"
   end
 
   create_table "posts", force: :cascade do |t|
     t.string   "name"
     t.text     "text"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "image"
+    t.string   "background_image"
+  end
+
+  create_table "slider_items", force: :cascade do |t|
+    t.text     "text"
+    t.string   "url"
+    t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "image"
   end
 
 end

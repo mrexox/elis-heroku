@@ -1,14 +1,18 @@
 <table>
   <tr>
-    <th> Theme: </th>
+    <th>Название:</th>
     <td> <%= f.text_field(:name) %> </td>
   </tr>
   <tr>
-    <th> Text: </th>
+    <th>Текст:</th>
     <td> <%= f.text_area(:text, size: '60x20') %></td>
   </tr>
   <tr>
-      <td> Image File: </td>
+      <td>Обложка:</td>
       <td><%= f.file_field :image %></td>
+  </tr>
+  <tr>
+      <td>Фон:</td>
+      <td><%= f.file_field :background_image%>
   </tr>
 </table>

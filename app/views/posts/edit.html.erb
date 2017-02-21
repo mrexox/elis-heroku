@@ -1,2 +1,10 @@
-<h1>Post#edit</h1>
-<p>Find me in app/views/post/edit.html.erb</p>
+<div class="post edit">
+    <h1>Edit Post <%= @post.id %></h1>
+    <%= form_for( @post ) do |f| %>
+	<%= render(:partial => 'form', :locals => {:f => f}) %>
+	<div class="button-submit">
+	    <%= f.submit("Update Post") %>
+	</div>
+
+    <% end %>
+</div>

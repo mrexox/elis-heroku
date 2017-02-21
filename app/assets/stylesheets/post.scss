@@ -1,3 +1,31 @@
 // Place all the styles related to the Post controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.right-side {
+  padding: 16px;
+}
+
+.image {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.icons {
+  text-align: center;
+  img {
+    max-width: 30px;
+    max-height: 30px;
+    margin-left: 10px;
+  }
+}
+
+.image-links img {
+  width: 90%;
+}
+
+.face img {
+  width: 100%;
+  border-radius: 9px;
+}
