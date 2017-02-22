@@ -65,30 +65,20 @@ img#logo {
     outline:none  !important;
 }
 
-.navbar .navbar-nav li.active {
-      a {
-        background-color: white;
-        color: #878787;
-      }
-}
-.navbar .navbar-nav li.active:hover {
-     a {
-       background-color: white;
-       color: black;
-     }
+#menu-element a {
+      color: black;
 }
 
+#menu-element a:hover {
+      color: #878787;
+}
 
-.navbar .navbar-nav  li:focus {
-   a {
-       color: black;
-     }
+#menu-element.active a {
+      color: #878787;
+      background-color: white;
+      color: #878787;
 }
-.navbar .navbar-nav  li:hover  {
-  a {
-       color: #878787;
-     }
-}
+
 
 .slide {
     margin-top: 20px;

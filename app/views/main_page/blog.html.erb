@@ -1,4 +1,11 @@
 <% @active = :blog %>
 <div class="container">
-    <h1>Блог в разработке!</h1>
+  <% @posts.each do |post|%>
+  <div class="record">
+      <%= image_tag(post.background_image_url.to_s, :class => "background") %>
+      <%= image_tag(post.image_url.to_s, :class => 'post-image') %>
+    <h2><%= post.name %></h2>
+    <p> <%= post.text %>  </p>
+  </div>
+  <% end %>
 </div>
