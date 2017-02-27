@@ -1,11 +1,19 @@
 <% @active = :blog %>
+<h1>Картинка</h1>
 <div class="container">
   <% @posts.each do |post|%>
   <div class="record">
-      <%= image_tag(post.background_image_url.to_s, :class => "background") %>
-      <%= image_tag(post.image_url.to_s, :class => 'post-image') %>
-    <h2><%= post.name %></h2>
-    <p> <%= post.text %>  </p>
+    <!-- <%= image_tag(post.background_image_url.to_s, :class => "background") %>-->
+
+    <span class="header"><%= post.name %></span>
+    <br>
+    <span class="date"><%= post.created_at.to_formatted_s(:short)%></span>
+    <%= image_tag(post.image_url.to_s, :class => 'post-image') %>
+    <span class="text"><%= post.text %></span>
+    <br>
+    <br>
+    <%= button_tag('Read more', :class => 'button') %>
+    <hr class="dash">
   </div>
   <% end %>
 </div>

@@ -1,102 +1,169 @@
 // Place all the styles related to the MainPage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 $white-transparent: rgba(247, 247, 247, 0.05);
 @font-face {
-    font-family: 'Quicksand Bold';
-    src: url('fonts/Quicksand-Bold.ttf') format('truetype');
+  font-family: 'Quicksand Bold';
+  src: url('fonts/Quicksand-Bold.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Quicksand Regular';
-    src: url('fonts/Quicksand-Regular.ttf') format('truetype');
+  font-family: 'Quicksand Regular';
+  src: url('fonts/Quicksand-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Calibril';
-    src: url('fonts/calibril.ttf') format('truetype');
+  font-family: 'Calibril';
+  src: url('fonts/calibril.ttf') format('truetype');
 }
-
-
+html, body { height: 100%; }
+#body-content {
+  min-height: 150%;
+}
 img#logo {
-    display: block;
-    margin-left: auto;
-    margin-right:auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40%;//300px;
 }
 
 .container.hat {
-    background-color: $white-transparent;
-    width: 100%;
-    text-align: center;
+  background-color: $white-transparent;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .container.main {
-    background-color: $white-transparent;
-    height: 100%;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    padding-top: 9px;
+  background-color: $white-transparent;
+  height: 100%;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  padding-top: 9px;
 }
 
 .navbar.navbar-default.center {
-    background-color: $white-transparent;
-    float: none;
-    display: inline-block;
-    margin:0 auto;
-    text-align: center;
-    font-family: 'Calibril';
-    font-size: 16px;
+  background-color: $white-transparent;
+  float: none;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Calibril';
+  font-size: 16px;
 }
 
-.navbar-nav > li > a {
-    padding-top:5px !important;
-    padding-bottom:5px !important;
+.navbar-nav>li>a {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
 }
 
-.navbar-nav > li {
-  padding-left:30px;
-  padding-right:30px;
+.navbar-nav>li {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .navbar {
-    min-height:32px !important;
-    border:none  !important;
-    outline:none  !important;
+  min-height: 32px !important;
+  border: none !important;
+  outline: none !important;
 }
 
 #menu-element a {
-      color: black;
+  color: black;
 }
 
 #menu-element a:hover {
-      color: #878787;
+  color: #878787;
 }
 
 #menu-element.active a {
-      color: #878787;
-      background-color: white;
-      color: #878787;
+  color: #878787;
+  background-color: white;
+  color: #878787;
 }
 
-
-.slide {
-    margin-top: 20px;
-}
+.slide {}
 
 .item {
-    text-align: center;
-    height: 500px;
-    width: 100%;
+  text-align: center;
+  height: 500px;
+  width: 100%;
 }
 
 .item img {
-    margin: auto;
+  margin: auto;
 }
 
 .carousel-caption {
-    font-family: 'Calibril';
-    font-size: 50px;
-    top: 50%;
-    transform: translateY(-50%);
+  font-family: 'Calibril';
+  font-size: 50px;
+  top: 58%;
+  transform: translateY(-50%);
+}
+#myCarousel {
+  .left.carousel-control,
+  .right.carousel-control {
+    background-image: none;
+  }
+}
+
+footer {
+  height: 100px;
+  hr {
+     border: 0;
+     height: 1px;
+     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #a1887f, rgba(0, 0, 0, 0));
+//    border-color: #a1887f;
+  }
+}
+// make import on them
+.icons {
+    text-align: center;
+    position: relative;
+    top: 15px;
+    .ico {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+      background-size: 100% 100%;
+      background-repeat: no repeat;
+    }
+    .youtube {
+      background-image: url("/icons/youtube-logo.png");
+    }
+    .youtube:hover {
+      background-image: url("/icons/youtube-logo-hover.png");
+    }
+    .pinterest {
+      background-image: url("/icons/pinterest-logo.png");
+    }
+    .pinterest:hover {
+      background-image: url("/icons/pinterest-logo-hover.png");
+    }
+    .vk {
+      background-image: url("/icons/vk-logo.png");
+    }
+    .vk:hover {
+      background-image: url("/icons/vk-logo-hover.png");
+    }
+    .behance {
+      background-image: url("/icons/behance-logo.png");
+    }
+    .behance:hover {
+      background-image: url("/icons/behance-logo-hover.png");
+    }
+    .facebook {
+      background-image: url("/icons/facebook-logo.png");
+    }
+    .facebook:hover {
+      background-image: url("/icons/facebook-logo-hover.png");
+    }
+    .instagram {
+      background-image: url("/icons/instagram-logo.png");
+    }
+    .instagram:hover {
+      background-image: url("/icons/instagram-logo-hover.png");
+    }
+
 }

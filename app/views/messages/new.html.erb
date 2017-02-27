@@ -1,30 +1,20 @@
 <% @active = :contacts %>
-<div class="container main">
-    <h2>Заполните форму:</h2>
+    <div class="container main">
+        <h2>Заполните форму:</h2>
 
-    <%= form_for(@message, url: {controller: 'messages', action: 'create'}, html: {method: 'post'}) do |f| %>
-	<table summary="Page from fields">
-	    <tr>
-		<th>Имя</th>
-		<td><%= f.text_field(:name) %></td>
-	    </tr>
-	    <tr>
-		<th>Телефон</th>
-		<td><%= f.phone_field(:phone_number) %> </td>
-	    </tr>
-	    <tr>
-		<th>e-mail</th>
-		<td><%= f.text_field(:email) %></td>
-	    </tr>
-	    <tr>
-		<th>Тема</th>
-		<td><%= f.text_field(:theme) %></td>
-	    </tr>
-	    <tr>
-		<th>Текст</th>
-		<td><%= f.text_area(:text) %></td>
-	    </tr>
-	</table>
-	<%= f.submit("Отправить") %>
-    <%  end %>
-</div>
+        <%= form_for(@message, url: {controller: 'messages', action: 'create'}, html: {method: 'post'}) do |f| %>
+            <div class="new-message">
+                <br> <strong>Имя</strong> <br>
+                <%= f.text_field(:name) %>
+                    <br> <strong>Телефон</strong> <br>
+                    <%= f.phone_field(:phone_number) %>
+                        <br> <strong>e-mail</strong> <br>
+                        <%= f.text_field(:email) %>
+                            <br> <strong>Тема</strong> <br>
+                            <%= f.text_field(:theme) %>
+                                <br> <strong>Текст</strong> <br>
+                                <%= f.text_area(:text) %> <br>
+                                    <%= f.submit("Отправить") %>
+            </div>
+            <%  end %>
+    </div>

@@ -2,14 +2,14 @@
 class MessagesController < ApplicationController
 
   before_action :check_logged_in, :only => [:show, :destroy, :index]
-  def index
+def index
     # Only for admin
     @messages = Message.sorted
-  end
+end
 
   def new
     @message = Message.new
-  end
+end
 
   def create
     @message = Message.new(message_params)

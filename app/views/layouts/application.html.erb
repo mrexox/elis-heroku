@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    <%= image_tag('logo.jpg', :id => 'logo') %>
+  <div id="body-content">
+  <!--<%= image_tag('logo.png', :id => 'logo') %>-->
+  <img src="/logo.png" id="logo" alt="Logo">
   <div class="container hat">
     <div class="row">
       <div class="navbar navbar-default center">
@@ -27,6 +29,18 @@
     </div>
   </div>
   <%= yield %>
-
+</div>
 </body>
+
+<footer>
+  <hr>
+  <div class="icons">
+    <div class="ico youtube"></div>
+    <div class="ico pinterest"></div>
+    <div class="ico instagram"></div>
+    <div class="ico vk"></div>
+    <div class="ico behance"></div>
+    <div class="ico facebook"></div>
+  </div>
+</footer>
 </html>
