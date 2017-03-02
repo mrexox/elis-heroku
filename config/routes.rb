@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
-  
+
   root 'main_page#home'
-  
+
   get 'admin', :to => 'access#console'
   get 'access/console'
   get 'access/login'
   post 'access/attempt_login'
   get 'access/logout'
-  
+  get 'blog/:permalink', :to => 'main_page#show_post', :as => 'show_post'
+
   # resources :images, only: [:index, :create, :destroy, :show]
 
   resources :messages, only: [:index, :create, :new, :destroy, :show]

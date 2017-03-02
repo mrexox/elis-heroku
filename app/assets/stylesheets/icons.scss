@@ -1,0 +1,49 @@
+.icons {
+    text-align: center;
+    position: relative;
+    .ico {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+      background-size: 100% 100%;
+      background-repeat: no repeat;
+    }
+    .youtube {
+      background-image: url("/icons/youtube-logo.png");
+    }
+    .youtube:hover {
+      background-image: url("/icons/youtube-logo-hover.png");
+    }
+    .pinterest {
+      background-image: url("/icons/pinterest-logo.png");
+    }
+    .pinterest:hover {
+      background-image: url("/icons/pinterest-logo-hover.png");
+    }
+    .vk {
+      background-image: url("/icons/vk-logo.png");
+    }
+    .vk:hover {
+      background-image: url("/icons/vk-logo-hover.png");
+    }
+    .behance {
+      background-image: url("/icons/behance-logo.png");
+    }
+    .behance:hover {
+      background-image: url("/icons/behance-logo-hover.png");
+    }
+    .facebook {
+      background-image: url("/icons/facebook-logo.png");
+    }
+    .facebook:hover {
+      background-image: url("/icons/facebook-logo-hover.png");
+    }
+    .instagram {
+      background-image: url("/icons/instagram-logo.png");
+    }
+    .instagram:hover {
+      background-image: url("/icons/instagram-logo-hover.png");
+    }
+
+}

@@ -27,6 +27,9 @@ img#logo {
   max-width: 40%;//300px;
 }
 
+img#blog-logo {
+  max-width: 100%;
+}
 .container.hat {
   background-color: $white-transparent;
   width: 100%;
@@ -107,63 +110,27 @@ img#logo {
   }
 }
 
+.notice {
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: #dabd89;
+  color: white;
+  box-shadow: 0 4px 8px;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center;
+}
+
+hr.devider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #a1887f, rgba(0, 0, 0, 0));
+  //    border-color: #a1887f;
+}
 footer {
-  height: 100px;
-  hr {
-     border: 0;
-     height: 1px;
-     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #a1887f, rgba(0, 0, 0, 0));
-//    border-color: #a1887f;
-  }
+  height: 70px;
 }
 // make import on them
-.icons {
-    text-align: center;
-    position: relative;
-    top: 15px;
-    .ico {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      margin-left: 10px;
-      background-size: 100% 100%;
-      background-repeat: no repeat;
-    }
-    .youtube {
-      background-image: url("/icons/youtube-logo.png");
-    }
-    .youtube:hover {
-      background-image: url("/icons/youtube-logo-hover.png");
-    }
-    .pinterest {
-      background-image: url("/icons/pinterest-logo.png");
-    }
-    .pinterest:hover {
-      background-image: url("/icons/pinterest-logo-hover.png");
-    }
-    .vk {
-      background-image: url("/icons/vk-logo.png");
-    }
-    .vk:hover {
-      background-image: url("/icons/vk-logo-hover.png");
-    }
-    .behance {
-      background-image: url("/icons/behance-logo.png");
-    }
-    .behance:hover {
-      background-image: url("/icons/behance-logo-hover.png");
-    }
-    .facebook {
-      background-image: url("/icons/facebook-logo.png");
-    }
-    .facebook:hover {
-      background-image: url("/icons/facebook-logo-hover.png");
-    }
-    .instagram {
-      background-image: url("/icons/instagram-logo.png");
-    }
-    .instagram:hover {
-      background-image: url("/icons/instagram-logo-hover.png");
-    }
-
-}
+@import "icons";

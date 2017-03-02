@@ -12,35 +12,41 @@
 
 <body>
   <div id="body-content">
-  <!--<%= image_tag('logo.png', :id => 'logo') %>-->
-  <img src="/logo.png" id="logo" alt="Logo">
-  <div class="container hat">
-    <div class="row">
-      <div class="navbar navbar-default center">
-        <div class="navbar-header">
+    <!--<%= image_tag('logo.png', :id => 'logo') %>-->
+    <img src="/logo.png" id="logo" alt="Logo">
+    <div class="container hat">
+      <div class="row">
+        <div class="navbar navbar-default center">
+          <div class="navbar-header">
+          </div>
+          <ul class="nav navbar-nav">
+            <li <%= active?(@active, :home) %> id="menu-element"><%= link_to('HOME', root_path)%></li>
+            <li <%= active?(@active, :blog) %> id="menu-element"><%= link_to('BLOG', blog_path) %></li>
+            <li <%= active?(@active, :shop) %> id="menu-element"><%= link_to('SHOP', shop_path) %></li>
+            <li <%= active?(@active, :contacts) %> id="menu-element"><%= link_to('CONTACTS', contacts_path) %></li>
+          </ul>
         </div>
-        <ul class="nav navbar-nav">
-          <li <%= active?(@active, :home) %> id="menu-element"><%= link_to('HOME', root_path)%></li>
-          <li <%= active?(@active, :blog) %> id="menu-element"><%= link_to('BLOG', blog_path) %></li>
-          <li <%= active?(@active, :shop) %> id="menu-element"><%= link_to('SHOP', shop_path) %></li>
-          <li <%= active?(@active, :contacts) %> id="menu-element"><%= link_to('CONTACTS', contacts_path) %></li>
-        </ul>
       </div>
     </div>
+    <hr class="devider">
+      <% if !flash[:notice].blank? %>
+      <div class="notice">
+        <%= flash[:notice] %>
+      </div>
+      <% end %>
+    <%= yield %>
   </div>
-  <%= yield %>
-</div>
 </body>
 
 <footer>
-  <hr>
+  <hr class="devider">
   <div class="icons">
     <div class="ico youtube"></div>
     <div class="ico pinterest"></div>
     <div class="ico instagram"></div>
     <div class="ico vk"></div>
     <div class="ico behance"></div>
-    <div class="ico facebook"></div>
+    <!--  <div class="ico facebook"></div> -->
   </div>
 </footer>
 </html>

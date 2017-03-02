@@ -1,20 +1,42 @@
 <% @active = :contacts %>
-    <div class="container main">
-        <h2>Заполните форму:</h2>
+<div class="row">
+  <div class="new-message">
+      <div class="col col-lg-3 col-md-1 col-xs-0">
+      </div>
+      <div class="col col-lg-6  col-md-11 col-xs-12">
 
+      <p><span class="contact-me">Contact Me</span></p>
+      <p><span class="mail">anilexez@gmail.com</span></p>
         <%= form_for(@message, url: {controller: 'messages', action: 'create'}, html: {method: 'post'}) do |f| %>
-            <div class="new-message">
-                <br> <strong>Имя</strong> <br>
-                <%= f.text_field(:name) %>
-                    <br> <strong>Телефон</strong> <br>
-                    <%= f.phone_field(:phone_number) %>
-                        <br> <strong>e-mail</strong> <br>
-                        <%= f.text_field(:email) %>
-                            <br> <strong>Тема</strong> <br>
-                            <%= f.text_field(:theme) %>
-                                <br> <strong>Текст</strong> <br>
-                                <%= f.text_area(:text) %> <br>
-                                    <%= f.submit("Отправить") %>
-            </div>
-            <%  end %>
+        <table>
+
+        <tr>
+          <td class="caption">Имя *</td>
+          <td><%= f.text_field(:name, :class => 'form-control') %></td>
+        </tr>
+        <tr>
+          <td class="caption">Телефон</td>
+          <td><%= f.phone_field(:phone_number, :class => 'form-control') %></td>
+        </tr>
+        <tr>
+          <td class="caption">e-mail *</td>
+          <td><%= f.text_field(:email, :class => 'form-control') %></td>
+        </tr>
+        <tr>
+          <td class="caption">Тема *</td>
+          <td><%= f.text_field(:theme, :class => 'form-control') %></td>
+        </tr>
+        <tr>
+          <td class="caption">Сообщение*</td>
+          <td><%= f.text_area(:text, :class => 'form-control', :rows => '5') %> <br></td>
+        </tr></table>
+        <%= f.submit("Отправить", :class => 'button') %>
+      <%  end %>
+  </div>
+  <div class="col col-lg-3 col-md-1 col-xs-0">
     </div>
+
+    </div>
+
+
+</div>

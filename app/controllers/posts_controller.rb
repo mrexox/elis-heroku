@@ -1,8 +1,8 @@
 # coding: utf-8
 class PostsController < ApplicationController
 
-  before_action :check_logged_in, :except => [:show]
-  
+  before_action :check_logged_in
+
   def new
     @post = Post.new
   end
@@ -13,7 +13,7 @@ class PostsController < ApplicationController
       flash[:notice] = "Пост #{@post.name} добавлен"
       redirect_to(posts_path)
     else
-      flash[:error] = "Пост #{@post.name} не был добавлен"
+      flash[:notice] = "Пост #{@post.name} не был добавлен"
       render('new')
     end
 
@@ -35,11 +35,11 @@ class PostsController < ApplicationController
       flash[:notice] = 'Пост успешно обновлён'
       redirect_to(posts_path)
     else
-      flash[:error] = 'Произошла ошибка. Какие-то поля введены неверно'
+      flash[:notice] = 'Произошла ошибка. Какие-то поля введены неверно'
       render('edit')
     end
   end
-  
+
   def delete
     @post = Post.find(params[:id])
   end
@@ -52,6 +52,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:image, :name, :text, :background_image)
+    params.require(:post).permit(:image, :name, :text, :permalink)
   end
 end

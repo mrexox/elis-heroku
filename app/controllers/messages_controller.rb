@@ -17,8 +17,8 @@ end
       MessageMailer.inform(@message).deliver_now
       redirect_to :controller => 'main_page', :action => 'home'
     else
-      flash[:notice] = 'Извините, произошла ошибка. Заполните форму ещё раз.'
-      redirect_to 'new'
+      flash[:notice] = 'Неверно заполнены поля. Попробуйте ещё раз.'
+      redirect_to(contacts_path)
     end
   end
 
