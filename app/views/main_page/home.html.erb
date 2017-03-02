@@ -1,5 +1,5 @@
 <% @active = :home %>
-
+<% if !@slides.blank? %>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -36,7 +36,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
+<% end %>
 <div class="container main">
 
 </div>
